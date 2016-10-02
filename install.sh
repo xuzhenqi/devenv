@@ -5,7 +5,9 @@ PWD=`pwd`
 if [ ! -f '~/.bash_profile' ]; then
   touch ~/.bash_profile
 fi
-echo "\nsource $PWD/.bash_profile\n" >> ~/.bash_profile
+echo "
+source $PWD/.bash_profile
+" >> ~/.bash_profile
 ## submodule
 git submodule update --init --recursive
 ## install brew
