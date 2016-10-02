@@ -19,7 +19,7 @@ else
 echo "Find brew in $BREW_BIN"
 fi
 
-brew install git macvim python
+brew install git macvim python cmake
 
 ## Setting up git
 git config --global user.name "xuzhenqi"
