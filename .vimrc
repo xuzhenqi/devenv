@@ -43,7 +43,8 @@ let g:miniBufExplMaxSize = 2
 " }}}
 
 " YouCompleteMe {{{
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = ".ycm_extra_conf.py" 
+" default path: ~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py
 nnoremap <C-[> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 set completeopt=longest,menu 
 let g:ycm_python_binary_path = 'python'

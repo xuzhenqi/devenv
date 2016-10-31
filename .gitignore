@@ -1,0 +1,4 @@
+download
+.vim/autoload
+.vim/indent
+*.swp

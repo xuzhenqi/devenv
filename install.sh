@@ -19,7 +19,19 @@ else
 echo "Find brew in $BREW_BIN"
 fi
 
-brew install git macvim python cmake
+function install() {
+  for bin in $*; do
+    path=`brew list | grep $bin`
+    if [ path == "" ]; then
+      brew install $bin
+    else
+      echo "$bin already installed."
+    fi
+  done
+  return 
+}
+
+install git macvim python cmake
 
 ## Setting up git
 git config --global user.name "xuzhenqi"
@@ -28,7 +40,7 @@ git config --global credential.helper osxkeychain
 
 ## Setting up vim
 rm -rf ~/.vim ~/.vimrc
-ln -sf source/vim-pathogen/autoload .vim/autoload
+ln -sf $PWD/source/vim-pathogen/autoload .vim/autoload
 if [ ! -d '.vim/indent' ]; then
 mkdir .vim/indent
 fi
