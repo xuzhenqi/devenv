@@ -15,6 +15,10 @@ set fileencodings=ucs-bom,utf-8,cp936
 set fileencoding=utf-8
 set clipboard+=unnamed " 共享剪切板
 filetype plugin indent on
+set mouse=a
+set showmatch
+set matchtime=1
+set scrolloff=3
 " }}}
 
 " pathogen {{{
