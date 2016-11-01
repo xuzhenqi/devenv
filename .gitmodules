@@ -1,18 +1,18 @@
 [submodule "source/vim-pathogen"]
 	path = source/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
+	url = git://github.com/tpope/vim-pathogen.git
 [submodule ".vim/bundle/auto-pairs"]
 	path = .vim/bundle/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
+	url = git://github.com/jiangmiao/auto-pairs.git
 [submodule ".vim/bundle/minibufexplorer"]
 	path = .vim/bundle/minibufexplorer
-	url = https://github.com/vim-scripts/minibufexplorerpp.git
+	url = git://github.com/vim-scripts/minibufexplorerpp.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+	url = git://github.com/scrooloose/nerdtree.git
 [submodule "source/google-vim"]
 	path = source/google-vim
-	url = https://github.com/vim-scripts/google.vim.git
+	url = git://github.com/vim-scripts/google.vim.git
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
+	url = git://github.com/Valloric/YouCompleteMe.git
