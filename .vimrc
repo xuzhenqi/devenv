@@ -17,8 +17,18 @@ set clipboard+=unnamed " 共享剪切板
 filetype plugin indent on
 set mouse=a
 set showmatch
+set hlsearch
 set matchtime=1
+set smartindent
+set cindent
+set expandtab
+set tabstop=4
 set scrolloff=3
+" }}}
+
+" Common Scripts {{{
+" TODO: map crrr only on c++ files. or only in the new c++ files.
+inoremap crrr /* Copyright(c). All Rights Reserved<cr>Author: Xu Zhenqi<cr>Email: xuzhenqi1993@gmail.com<cr>/<cr>
 " }}}
 
 " pathogen {{{
@@ -48,7 +58,8 @@ let g:miniBufExplMaxSize = 2
 
 " YouCompleteMe {{{
 let g:ycm_global_ycm_extra_conf = ".ycm_extra_conf.py" 
-" default path: ~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py
+let g:ycm_confirm_extra_conf = 0
+" default path: ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
 nnoremap <C-[> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 set completeopt=longest,menu 
 let g:ycm_python_binary_path = 'python'
