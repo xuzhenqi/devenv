@@ -69,6 +69,7 @@ nnoremap <C-[> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 set completeopt=longest,menu 
 let g:ycm_python_binary_path = 'python'
 nnoremap <C-5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap yf :YcmCompleter FixIt<CR>
 let g:ycm_always_populate_location_list = 1
 autocmd InsertLeave * if pumvisible() == 0 | pclose | endif " 离开插入模式后自动关闭预览窗口
 unmap <ESC>
