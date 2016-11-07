@@ -31,6 +31,11 @@ set scrolloff=3
 inoremap crrr /* Copyright(c). All Rights Reserved<cr>Author: Xu Zhenqi<cr>Email: xuzhenqi1993@gmail.com<cr>/<cr>
 " }}}
 
+" Cuda Related {{{
+au BufNewFile,BufRead *.cu set filetype=cuda
+au BufNewFile,BufRead *.cuh set filetype=cuda
+" }}}
+
 " pathogen {{{
 execute pathogen#infect()
 " }}}
@@ -58,7 +63,7 @@ let g:miniBufExplMaxSize = 2
 
 " YouCompleteMe {{{
 let g:ycm_global_ycm_extra_conf = ".ycm_extra_conf.py" 
-let g:ycm_confirm_extra_conf = 0
+let g:ycm_confirm_extra_conf = 0 
 " default path: ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
 nnoremap <C-[> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 set completeopt=longest,menu 
