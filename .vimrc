@@ -51,6 +51,7 @@ let g:AutoPairsShortcutBackInsert='∫' " <M-b>
 " nerdtree {{{
 autocmd vimenter * NERDTree
 autocmd vimenter * wincmd p
+" R : refresh root folder
 " <M-n> to toggle NERDTree
 map ˜ :NERDTreeToggle<CR> 
 " close vim if NERDTree is the only window
