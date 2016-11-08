@@ -11,13 +11,10 @@ source $PWD/.bash_profile
 ## submodule
 git submodule update --init --recursive
 ## install brew
-BREW_BIN=`which brew`
-if [ BREW_BIN == "" ]; then
-echo "No brew found! Install it"
+BREW_BIN=`which brew` && \ 
+echo "Find brew in $BREW_BIN" || \
+echo "No brew found! Install it"; \
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-echo "Find brew in $BREW_BIN"
-fi
 
 function install() {
   for bin in $*; do
