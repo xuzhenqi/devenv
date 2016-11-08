@@ -1,4 +1,8 @@
 set -e
+echo "Usage: sh install_mac.sh [NAME] [EMAIL]"
+echo "[NAME]: $1"
+echo "[EMAIL] $2"
+echo "Starting Install ..."
 PWD=`pwd`
 # Mac
 ## bash_profile
@@ -25,14 +29,14 @@ function install() {
       echo "$bin already installed."
     fi
   done
-  return 
+  return
 }
 
 install git macvim python cmake
 
 ## Setting up git
-git config --global user.name "xuzhenqi"
-git config --global user.email "xuzhenqi1993@gmail.com"
+git config --global user.name "$1"
+git config --global user.email "$2"
 git config --global credential.helper osxkeychain
 
 ## Setting up vim
