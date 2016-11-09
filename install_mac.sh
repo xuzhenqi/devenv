@@ -15,15 +15,13 @@ source $PWD/.bash_profile
 ## submodule
 git submodule update --init --recursive
 ## install brew
-BREW_BIN=`which brew` && \ 
-echo "Find brew in $BREW_BIN" || \
-echo "No brew found! Install it"; \
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+BREW_BIN=`which brew` || echo "No brew found! Install it"; /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+BREW_BIN=`which brew` && echo "Find brew in $BREW_BIN" 
 
 function install() {
   for bin in $*; do
     path=`brew list | grep $bin`
-    if [ path == "" ]; then
+    if [ "$path" = "" ]; then
       brew install $bin
     else
       echo "$bin already installed."
