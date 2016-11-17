@@ -28,7 +28,7 @@ set scrolloff=3
 
 " Common Scripts {{{
 " TODO: map crrr only on c++ files. or only in the new c++ files.
-inoremap crrr /* Copyright(c). All Rights Reserved<cr>Author: Xu Zhenqi<cr>Email: xuzhenqi1993@gmail.com<cr>/<cr>
+au FileType c,cpp inoremap crrr /* Copyright(c). All Rights Reserved<cr>Author: Xu Zhenqi<cr>Email: xuzhenqi1993@gmail.com<cr>/<cr>
 " }}}
 
 " Cuda Related {{{
