@@ -36,6 +36,10 @@ function install() {
 
 install git macvim python cmake
 
+# TODO: Check avalibility
+brew cask install osxfuse
+brew install sshfs 
+
 ## Setting up git
 git config --global user.name "$1"
 git config --global user.email "$2"
