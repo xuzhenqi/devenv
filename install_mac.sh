@@ -1,5 +1,6 @@
-set -e
 echo "Usage: sh install_mac.sh [NAME] [EMAIL]"
+echo "Please first download clang(http://llvm.org/releases/download.html) into download/mac/, then press any keyboard..."
+read temp
 echo "[NAME]: $1"
 echo "[EMAIL] $2"
 echo "Starting Install ..."
@@ -15,14 +16,17 @@ source $PWD/.bash_profile
 ## submodule
 git submodule update --init --recursive
 ## install brew
-BREW_BIN=`which brew` || echo "No brew found! Install it"; /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 BREW_BIN=`which brew` && echo "Find brew in $BREW_BIN" 
+BREW_BIN=`which brew` || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 function install() {
   for bin in $*; do
     path=`brew list | grep $bin`
     if [ "$path" = "" ]; then
       brew install $bin
+      if [ "$bin" = "macvim" ]; then
+        brew linkapps macvim
+      fi
     else
       echo "$bin already installed."
     fi
