@@ -10,6 +10,7 @@ PWD=`pwd`
 mkdir download
 wget -O download/Anaconda2-4.2.0-MacOSX-x86_64.sh https://repo.continuum.io/archive/Anaconda2-4.2.0-MacOSX-x86_64.sh
 bash download/Anaconda2-4.2.0-MacOSX-x86_64.sh
+pip install ipdb
 
 ## bash_profile
 if [ ! -f '~/.bash_profile' ]; then
