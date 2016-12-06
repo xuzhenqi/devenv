@@ -67,14 +67,15 @@ let g:miniBufExplMaxSize = 2
 let g:ycm_global_ycm_extra_conf = ".ycm_extra_conf.py" 
 let g:ycm_confirm_extra_conf = 0 
 " default path: ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
-nnoremap <C-[> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" nnoremap <C-[> :YcmCompleter GoToDefinitionElseDeclaration<CR> 
+" unmap <ESC>
+" YCM GoTo works bad, using tags instead
 set completeopt=longest,menu 
 let g:ycm_python_binary_path = 'python'
 nnoremap <C-5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap yf :YcmCompleter FixIt<CR>
 let g:ycm_always_populate_location_list = 1
 autocmd InsertLeave * if pumvisible() == 0 | pclose | endif " 离开插入模式后自动关闭预览窗口
-unmap <ESC>
 " }}}
 
 " Editing VIMRC {{{
@@ -88,4 +89,15 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker 
 augroup END
+" }}}
+
+" Taglist {{{
+nnoremap <leader>t :TlistToggle<cr>
+nnoremap <C-[> :ts<cr>
+" ctags -R --c++-kinds=+p --fields=+isS --extra=+q .
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_Use_SingleClick = 1
+let Tlist_Auto_Open = 1
 " }}}
