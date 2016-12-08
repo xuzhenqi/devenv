@@ -12,6 +12,9 @@ wget -O download/Anaconda2-4.2.0-MacOSX-x86_64.sh https://repo.continuum.io/arch
 bash download/Anaconda2-4.2.0-MacOSX-x86_64.sh
 pip install ipdb
 
+## install XQuartz
+wget -O download/XQuartz-2.7.11.dmg https://dl.bintray.com/xquartz/downloads/XQuartz-2.7.11.dmg
+
 ## bash_profile
 if [ ! -f '~/.bash_profile' ]; then
   touch ~/.bash_profile

@@ -30,7 +30,7 @@ set scrolloff=3
 " Common Scripts {{{
 au FileType c,cpp inoremap crrr /* Copyright(c). All Rights Reserved<cr>Author: Xu Zhenqi<cr>Email: xuzhenqi1993@gmail.com<cr>/<cr>
 au FileType python nnoremap <leader>de Iimport ipdb; ipdb.set_trace()<cr><esc> 
-" }}}
+" }>}}
 
 " Cuda Related {{{
 au BufNewFile,BufRead *.cu set filetype=cuda
@@ -42,11 +42,11 @@ execute pathogen#infect()
 " }}}
 
 " autopairs {{{
-let g:AutoPairsShortcutToggle='π' " <M-p>
+" let g:AutoPairsShortcutToggle='π' " <M-p>
 " let g:AutoPairsShortcutFastWrap='´' " <M-e>
 " let g:AutoParisShortcutJump='˜' " <M-n>
-let g:AutoPairsFlyMode=1
-let g:AutoPairsShortcutBackInsert='∫' " <M-b>
+" let g:AutoPairsFlyMode=1
+" let g:AutoPairsShortcutBackInsert='∫' " <M-b>
 " }}}
 
 " nerdtree {{{
