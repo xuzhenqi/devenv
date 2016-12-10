@@ -30,7 +30,7 @@ set scrolloff=3
 " Common Scripts {{{
 au FileType c,cpp inoremap crrr /* Copyright(c). All Rights Reserved<cr>Author: Xu Zhenqi<cr>Email: xuzhenqi1993@gmail.com<cr>/<cr>
 au FileType python nnoremap <leader>de Iimport ipdb; ipdb.set_trace()<cr><esc> 
-" }>}}
+" }}}
 
 " Cuda Related {{{
 au BufNewFile,BufRead *.cu set filetype=cuda
@@ -100,4 +100,13 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_Use_SingleClick = 1
 let Tlist_Auto_Open = 1
+" }}}
+
+" IndentLine {{{
+nnoremap <leader>il :IndentLinesToggle<cr>
+let g:indentLine_char = '.'
+let g:indentLine_color_term = 120
+let g:indentLine_color_tty_light = 7 " (default: 4)
+let g:indentLine_color_dark = 1 " (default: 2)
+let g:indentLine_color_gui = '#A4E57E'
 " }}}
