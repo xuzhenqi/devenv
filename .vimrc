@@ -103,6 +103,7 @@ let Tlist_Auto_Open = 1
 " }}}
 
 " IndentLine {{{
+autocmd vimenter * IndentLinesToggle
 nnoremap <leader>il :IndentLinesToggle<cr>
 let g:indentLine_char = '.'
 let g:indentLine_color_term = 120
