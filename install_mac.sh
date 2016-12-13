@@ -70,3 +70,6 @@ cd .vim/bundle/YouCompleteMe/
 cd -
 ln -sf $PWD/.vim ~/.vim
 ln -sf $PWD/.vimrc ~/.vimrc
+
+## tmux conf
+ln -s $PWD/.tmux.conf ~/.tmux.conf

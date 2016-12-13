@@ -54,3 +54,6 @@ unzip ffmpeg-master.zip
 cd ffmpeg-master
 ./configure --prefix=${PWD}/local
 make -j`npro` && make install
+
+## tmux conf
+ln -s $PWD/.tmux.conf ~/.tmux.conf
