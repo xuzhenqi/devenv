@@ -28,7 +28,7 @@ set scrolloff=3
 " }}}
 
 " Common Scripts {{{
-au FileType c,cpp inoremap crrr /* Copyright(c). All Rights Reserved<cr>Author: Xu Zhenqi<cr>Email: xuzhenqi1993@gmail.com<cr>/<cr>
+au FileType c,cpp inoremap crrr /* Copyright(c). All Rights Reserved<cr>Author: Xu Zhenqi<cr>Email: xuzhenqi@bytedance.com<cr>/<cr>
 au FileType python nnoremap <leader>de Iimport ipdb; ipdb.set_trace()<cr><esc> 
 " }}}
 
@@ -103,7 +103,7 @@ let Tlist_Auto_Open = 1
 " }}}
 
 " IndentLine {{{
-autocmd vimenter * IndentLinesToggle
+let g:indentLine_enabled = 0
 nnoremap <leader>il :IndentLinesToggle<cr>
 let g:indentLine_char = '.'
 let g:indentLine_color_term = 120
