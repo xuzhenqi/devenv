@@ -5,3 +5,6 @@ alias egrep='egrep --color=auto'
 alias ll="ls -alF"
 alias la='ls -A'
 alias l='ls -CF'
+
+export PATH=/data00/xuzhenqi/local/bin:$PATH
+export LD_LIBRARY_PATH=/data00/xuzhenqi/local/lib
