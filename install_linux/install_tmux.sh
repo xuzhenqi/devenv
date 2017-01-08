@@ -45,4 +45,4 @@ if [ "$TMUX" = "" ]; then
     make install 
 fi
 
-ln -s $PWD/.tmux.conf ~/.tmux.conf
+ln -sf $PWD/.tmux.conf ~/.tmux.conf

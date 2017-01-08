@@ -1,10 +1,14 @@
-if [ ! -f "${PWD}/download/ffmpeg-master.zip" ]; then
-   wget -O ${PWD}/download/ffmpeg-master.zip\
-       https://github.com/FFmpeg/FFmpeg/archive/master.zip
+FFMPEG=`which ffmpeg`
+if [ "$FFMPEG" != "${DEV_HOME}/local/bin/ffmpeg" ]; then
+    echo "ffmpeg not found."
+    if [ ! -d "${DEV_HOME}/development/FFmpeg-master" ]; then
+        echo "Download ffmpeg"
+        wget -O ${DEV_HOME}/development/devenv/download/ffmpeg-master.zip\
+            https://github.com/FFmpeg/FFmpeg/archive/master.zip
+        unzip ${DEV_HOME}/development/devenv/download/ffmpeg-master.zip -d ${DEV_HOME}/development
+    fi
+
+    cd ${DEV_HOME}/development/FFmpeg-master
+    ./configure --prefix=${DEV_HOME}/local --disable-yasm
+    make -j`nproc` && make install
 fi
-
-unzip ${PWD}/download/ffmpeg-master.zip -d ${PWD}/../
-
-cd ${PWD}/../ffmpeg-master
-./configure --prefix=${PWD}/../../local
-make -j`nproc` && make install
