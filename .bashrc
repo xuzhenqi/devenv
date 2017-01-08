@@ -9,6 +9,6 @@ alias l='ls -CF'
 # TODO: make DEV_HOME an option
 export DEV_HOME=/data00/xuzhenqi 
 export PATH=${DEV_HOME}/development/anaconda2/bin:${DEV_HOME}/local/bin:$PATH
-export LD_LIBRARY_PATH=${DEV_HOME}/local/lib
-export CPPFLAGS="-I${DEV_HOME}/local/include"
-export LDFLAG="-L${DEV_HOME}/local/lib"
+export LD_LIBRARY_PATH=${DEV_HOME}/local/lib:$LD_LIBRARY_PATH
+export CPPFLAGS="-I${DEV_HOME}/local/include":$CPPFLAGS
+export LDFLAGS="-L${DEV_HOME}/local/lib":$LDFLAGS
