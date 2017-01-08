@@ -118,5 +118,5 @@ let g:indentLine_color_gui = '#A4E57E'
 
 " vim-comentary {{{
 autocmd FileType cmake setlocal cms=#\ %s
-autocmd FileType c,cpp setlocal cms=//\ %s 
+autocmd FileType c,cpp,cuda setlocal cms=//\ %s 
 " }}}
