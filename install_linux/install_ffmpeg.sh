@@ -9,6 +9,6 @@ if [ "$FFMPEG" != "${DEV_HOME}/local/bin/ffmpeg" ]; then
     fi
 
     cd ${DEV_HOME}/development/FFmpeg-master
-    ./configure --prefix=${DEV_HOME}/local --disable-yasm
+    ./configure --prefix=${DEV_HOME}/local --disable-yasm --enable-shared --enable-pic
     make -j`nproc` && make install
 fi
