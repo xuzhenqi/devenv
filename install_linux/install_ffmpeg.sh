@@ -9,6 +9,6 @@ if [ "$FFMPEG" != "${DEV_HOME}/local/bin/ffmpeg" ]; then
     fi
 
     cd ${DEV_HOME}/development/FFmpeg-master
-    ./configure --prefix=${DEV_HOME}/local --disable-yasm --enable-shared --enable-pic
+    ./configure --prefix=${DEV_HOME}/local --disable-yasm --enable-shared --enable-pic --enable-libx264 --enable-gpl --extra-cflags=-I$CPPFLAGS
     make -j`nproc` && make install
 fi
