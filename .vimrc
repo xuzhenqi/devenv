@@ -59,7 +59,7 @@ autocmd vimenter * NERDTree
 autocmd vimenter * wincmd p
 " R : refresh root folder
 " <M-n> to toggle NERDTree
-map ˜ :NERDTreeToggle<CR> 
+nnoremap <leader>ne :NERDTreeToggle<CR> 
 " close vim if NERDTree is the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " }}} 

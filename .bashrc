@@ -5,6 +5,7 @@ alias egrep='egrep --color=auto'
 alias ll="ls -alF"
 alias la='ls -A'
 alias l='ls -CF'
+alias tmux="tmux -2" # force tmux to use xterm-256color
 
 # TODO: make DEV_HOME an option
 export DEV_HOME=/data00/xuzhenqi 
