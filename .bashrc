@@ -8,9 +8,10 @@ alias l='ls -CF'
 alias tmux="tmux -2" # force tmux to use xterm-256color
 
 # TODO: make DEV_HOME an option
-export DEV_HOME=/data01/work/xuzhenqi
+export DEV_HOME=/data00/xuzhenqi
 export PATH=${DEV_HOME}/development/anaconda2/bin:${DEV_HOME}/local/bin:$PATH
 export LD_LIBRARY_PATH=${DEV_HOME}/local/lib:$LD_LIBRARY_PATH
 export CPPFLAGS="-I${DEV_HOME}/local/include":$CPPFLAGS
 export LDFLAGS="-L${DEV_HOME}/local/lib":$LDFLAGS
 export PKG_CONFIG_PATH="$DEV_HOME/local/lib/pkgconfig":$PKG_CONFIG_PATH
+export PYTHONPATH="/data00/xuzhenqi/local/lib/python2.7/site-packages":$PYTHONPATH
