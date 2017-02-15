@@ -11,3 +11,4 @@ echo "[INFO] Set up jupyter notebook\
     http://jupyter-notebook.readthedocs.io/en/latest/public_server.html"
 
 pip install ipdb
+pip install flake8 # for vim-flake8 plugin
