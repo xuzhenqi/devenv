@@ -10,3 +10,4 @@ sh install_linux/install_tmux.sh
 sh install_linux/install_libx264.sh
 sh install_linux/install_ffmpeg.sh
 sh install_linux/install_parallel.sh
+sh install_linux/install_eigen.sh
