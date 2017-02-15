@@ -27,8 +27,8 @@ set shiftwidth=4
 set scrolloff=3
 set backspace=indent,eol,start
 " 80 characters visualization
-set textwidth=80
-set cc=+1,+2
+" set textwidth=80
+set cc=81,82
 hi ColorColumn ctermbg=darkgrey guibg=lightgrey
 " }}}
 
