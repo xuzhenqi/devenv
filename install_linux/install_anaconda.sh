@@ -12,3 +12,4 @@ echo "[INFO] Set up jupyter notebook\
 
 pip install ipdb
 pip install flake8 # for vim-flake8 plugin
+pip install gprof2dot # for profiling visualizatoin
