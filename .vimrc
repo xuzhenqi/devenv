@@ -127,3 +127,10 @@ autocmd FileType python map <buffer> <leader>fl :call Flake8()<CR>
 let g:flake8_show_in_file=1
 autocmd BufWritePost *.py call Flake8()
 " }}}
+
+" proto syntax {{{
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+  au! BufRead,BufNewFile *.prototxt setfiletype proto
+augroup end
+" }}}
