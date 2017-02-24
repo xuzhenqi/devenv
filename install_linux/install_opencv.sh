@@ -11,7 +11,6 @@ if [ "$OPENCV" = "" ]; then
         mkdir build
     fi
     cd build
-    echo `pwd`
     # TIFF is off because
     # http://answers.opencv.org/question/69481/undefined-reference-to-tiffreaddirectorylibtiff_40/
     # build without gpu
