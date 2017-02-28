@@ -7,8 +7,11 @@ bash download/Anaconda2-4.2.0-Linux-x86_64.sh -b -p ${PWD}/../anaconda2
 # TODO: set up jupyter notebook based on\
 #    http://jupyter-notebook.readthedocs.io/en/latest/public_server.html
 conda install libgcc # To solve LIBGCC_3.40 not found error
-echo "[INFO] Set up jupyter notebook\
-    http://jupyter-notebook.readthedocs.io/en/latest/public_server.html"
+# jupyter notebook setting
+jupyter notebook --generate-config
+echo "c.NotebookApp.ip = '*'" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.port = 9999" >> ~/.jupyter/jupyter_notebook_config.py
 
 pip install ipdb
 pip install flake8 # for vim-flake8 plugin
