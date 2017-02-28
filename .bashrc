@@ -6,6 +6,7 @@ alias ll="ls -alF"
 alias la='ls -A'
 alias l='ls -CF'
 alias tmux="tmux -2" # force tmux to use xterm-256color
+alias vim="vim -u $DEV_HOME/development/devenv/.vimrc"
 
 # TODO: make DEV_HOME an option
 # export DEV_HOME=/data01/work/xuzhenqi
