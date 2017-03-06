@@ -125,7 +125,7 @@ autocmd FileType c,cpp,cuda setlocal cms=//\ %s
 " vim-flake8 {{{
 autocmd FileType python map <buffer> <leader>fl :call Flake8()<CR>
 let g:flake8_show_in_file=1
-autocmd BufWritePost *.py call Flake8()
+" autocmd BufWritePost *.py call Flake8()
 " }}}
 
 " proto syntax {{{
