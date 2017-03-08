@@ -134,3 +134,21 @@ augroup filetype
   au! BufRead,BufNewFile *.prototxt setfiletype proto
 augroup end
 " }}}
+
+" python init {{{
+function ScriptInit()
+    call append(0, "#!/usr/bin/env python")
+    call append(1, "import argparse")
+    call append(2, "")
+    call append(3, "")
+    call append(4, "def init():")
+    call append(5, "    p = argparse.ArgumentParser(description='')")
+    call append(6, "    return p.parse_args()")
+    call append(7, "")
+    call append(8, "")
+    call append(9, "if __name__ == '__main__':")
+    call append(10, "    a = init()")
+endfunction
+autocmd FileType python nnoremap <leader>si :call ScriptInit()<cr>
+" }}}
+
