@@ -85,8 +85,8 @@ autocmd InsertLeave * if pumvisible() == 0 | pclose | endif " 离开插入模式
 
 " Editing VIMRC {{{
 let mapleader = ","
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr> 
+nnoremap <leader>ev :vsplit ${DEV_HOME}/development/devenv/.vimrc<cr>
+nnoremap <leader>sv :source ${DEV_HOME}/development/devenv/.vimrc<cr> 
 " }}}
 
 " Vimcript file settings ---------------------- {{{
