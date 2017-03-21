@@ -1,5 +1,5 @@
 CTAGS=`which ctags`
-if [ "CTAGS" = "" ]; then
+if [ "$CTAGS" = "" ]; then
 cd $DEV_HOME/development
 wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
 tar -xzf ctags-5.8.tar.gz
