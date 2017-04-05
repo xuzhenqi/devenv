@@ -1,7 +1,6 @@
 if [ "${DEV_HOME}" = "" ]; then
     echo "[Error] DEV_HOME: ${DEV_HOME}"
 fi
-sed "/export DEV_HOME/c export DEV_HOME=${DEV_HOME}" $PWD/.bashrc
 if [ ! -f '~/.bashrc' ]; then
   touch ~/.bashrc
 fi

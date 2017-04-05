@@ -5,7 +5,7 @@ if [ "$X264" = "" ]; then
         git clone git://git.videolan.org/x264.git
     fi
     cd ${DEV_HOME}/development/x264
-    ./configure --prefix=/data01/work/xuzhenqi/local --enable-static --disable-opencl --enable-shared --enable-pic --disable-asm
+    ./configure --prefix=$DEV_HOME/local --enable-static --disable-opencl --enable-shared --enable-pic --disable-asm
     make -j`nproc`
     make install
 fi

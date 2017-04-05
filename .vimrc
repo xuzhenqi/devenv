@@ -97,6 +97,7 @@ augroup END
 " }}}
 
 " Taglist {{{
+let Tlist_Ctags_Cmd = '$DEV_HOME/local/bin/ctags'
 nnoremap <leader>t :TlistToggle<cr>
 nnoremap <C-[> :ts<cr>
 " ctags -R --c++-kinds=+p --fields=+isS --extra=+q .
@@ -104,7 +105,7 @@ let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_Use_SingleClick = 1
-let Tlist_Auto_Open = 1
+" let Tlist_Auto_Open = 1
 " }}}
 
 " IndentLine {{{

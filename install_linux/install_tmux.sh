@@ -45,4 +45,4 @@ if [ "$TMUX" = "" ]; then
     make install 
 fi
 
-ln -sf $PWD/.tmux.conf ~/.tmux.conf
+ln -sf $DEV_HOME/development/devenv/.tmux.conf ~/.tmux.conf

@@ -8,6 +8,7 @@ if [ ! -d "${DEV_HOME}/local/include/eigen3" ]; then
     fi
     cd "$DEV_HOME/development/eigen-eigen-da9b4e14c255" 
     mkdir build
+    cd build
     cmake .. -DCMAKE_INSTALL_PREFIX="$DEV_HOME/local"
     make install
 else

@@ -1,3 +1,4 @@
+mkdir -p ${PWD}/download
 if [ ! -f "${PWD}/download/Anaconda2-4.2.0-Linux-x86_64.sh" ]; then
     wget -O ${PWD}/download/Anaconda2-4.2.0-Linux-x86_64.sh \
         https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh

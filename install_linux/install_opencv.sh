@@ -1,12 +1,12 @@
 OPENCV=`ls ${DEV_HOME}/local/lib | grep libopencv_core`
 if [ "$OPENCV" = "" ]; then
-    if [ ! -d "${DEV_HOME}/development/opencv-3.0.0" ]; then
-        wget -O ${DEV_HOME}/development/opencv-3.0.0.zip https://github.com/opencv/opencv/archive/3.0.0.zip
+    if [ ! -d "${DEV_HOME}/development/opencv-2.4.13" ]; then
+        wget -O ${DEV_HOME}/development/opencv-2.4.13.zip https://github.com/opencv/opencv/archive/2.4.13.zip
         cd ${DEV_HOME}/development
-        unzip ${DEV_HOME}/development/opencv-3.0.0.zip
+        unzip ${DEV_HOME}/development/opencv-2.4.13.zip
         cd -
     fi
-    cd ${DEV_HOME}/development/opencv-3.0.0
+    cd ${DEV_HOME}/development/opencv-2.4.13
     if [ ! -d "build" ]; then
         mkdir build
     fi
