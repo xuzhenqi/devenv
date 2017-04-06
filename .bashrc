@@ -9,8 +9,20 @@ alias l='ls -CF'
 alias tmux="tmux -2" # force tmux to use xterm-256color
 alias vim="vim -u $DEV_HOME/development/devenv/.vimrc"
 
+# locale setting
 export LANG="en_US.UTF-8"
-export LC_ALL="zh_CN.UTF-8"
+export LC_ALL=""
+export LC_NUMERIC="zh_CN.UTF-8"
+export LC_TIME="zh_CN.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_MONETARY="zh_CN.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_PAPER="zh_CN.UTF-8"
+export LC_NAME="zh_CN.UTF-8"
+export LC_ADDRESS="zh_CN.UTF-8"
+export LC_TELEPHONE="zh_CN.UTF-8"
+export LC_MEASUREMENT="zh_CN.UTF-8"
+export LC_IDENTIFICATION="zh_CN.UTF-8"
 
 export PATH=${DEV_HOME}/development/anaconda2/bin:${DEV_HOME}/local/bin:$PATH
 export LD_LIBRARY_PATH=${DEV_HOME}/local/lib:$LD_LIBRARY_PATH
