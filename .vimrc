@@ -30,6 +30,8 @@ set backspace=indent,eol,start
 " set textwidth=80
 set cc=81,82
 hi ColorColumn ctermbg=darkgrey guibg=lightgrey
+
+let mapleader = ","
 " }}}
 
 " Common Scripts {{{
@@ -84,7 +86,6 @@ autocmd InsertLeave * if pumvisible() == 0 | pclose | endif " 离开插入模式
 " }}}
 
 " Editing VIMRC {{{
-let mapleader = ","
 nnoremap <leader>ev :vsplit ${DEV_HOME}/development/devenv/.vimrc<cr>
 nnoremap <leader>sv :source ${DEV_HOME}/development/devenv/.vimrc<cr> 
 " }}}
