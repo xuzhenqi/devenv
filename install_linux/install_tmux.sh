@@ -1,23 +1,23 @@
 TMUX=`which tmux`
 
 if [ "$TMUX" = "" ]; then 
-    # TODO: install from source
     # install libevent
-    LIBEVENT=`find /lib /lib64 /usr/lib /usr/local/lib ${PWD}/../../local/lib -name libevent*.so`
-    if [ "$LIBEVENT" = ""]; then
-	echo "[INFO] libevent not found, install from source" 
-	if [ ! -d "$PWD/../libevent-2.0.22-stable" ]; then
-            wget -O $PWD/download/libevent-2.0.22-stable.tar.gz https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz	
-            tar -xzf $PWD/download/libevent-2.0.22-stable.tar.gz -d $PWD/..
-	fi
-        cd $PWD/../libevent-2.0.22-stable
-       	./configure --prefix=$PWD/../../local 
+    LIBEVENT=`find /lib /lib64 /usr/lib /usr/local/lib $DEV_HOME/local -name libevent*.so`
+    if [ "$LIBEVENT" = "" ]; then
+        echo "[INFO] libevent not found, install from source" 
+        cd $DEV_HOME/development
+        if [ ! -d "libevent-2.1.8-stable" ]; then
+            wget -O libevent-2.1.8-stable.tar.gz https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz	
+            tar -xzf libevent-2.1.8-stable.tar.gz
+        fi
+        cd libevent-2.1.8-stable
+        ./configure --prefix=$DEV_HOME/local 
         make -j`nproc`
         make install
     else
         echo "[INFO] Find libevent in $LIBEVENT"
     fi
-    
+
     # install ncurses
     NCURSES=`find /lib /lib64 /usr/lib /usr/local/lib ${PWD}/../../local/lib -name libncurses*.so`
     if [ "$NCURSES" = "" ]; then
@@ -27,20 +27,21 @@ if [ "$TMUX" = "" ]; then
             tar -xzf $PWD/../ncurses-5.9.tar.gz -d $PWD/..
         fi
         cd $PWD/../ncurses-5.9
-       	./configure --prefix=$PWD/../../local --with-pkg-config=$PWD/../../local/lib/pkgconfig --enable-pc-files
+        ./configure --prefix=$PWD/../../local --with-pkg-config=$PWD/../../local/lib/pkgconfig --enable-pc-files
         make -j`nproc`
         make install
     else
         echo "[INFO] Find libncurses in $NCURSES"
     fi
-    
+
     # install tmux
-    if [ ! -d "$PWD/../tmux-2.3" ]; then
-        wget -O $PWD/../tmux-2.3.tar.gz https://github.com/tmux/tmux/releases/download/2.3/tmux-2.3.tar.gz
-	tar -xzf $PWD/../tmux-2.3.tar.gz -d $PWD/..
+    cd $DEV_HOME/development
+    if [ ! -d "tmux-2.3" ]; then
+        wget -O tmux-2.3.tar.gz https://github.com/tmux/tmux/releases/download/2.3/tmux-2.3.tar.gz
+        tar -xzf tmux-2.3.tar.gz
     fi
-    cd $PWD/../tmux-2.3
-    ./configure --prefix=$PWD/../../local
+    cd tmux-2.3
+    ./configure --prefix=$DEV_HOME/local
     make -j`nproc`
     make install 
 fi
