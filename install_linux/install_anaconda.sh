@@ -17,3 +17,4 @@ echo "c.NotebookApp.port = 9999" >> ~/.jupyter/jupyter_notebook_config.py
 pip install ipdb
 pip install flake8 # for vim-flake8 plugin
 pip install gprof2dot # for profiling visualizatoin
+pip install protobuf
