@@ -1,13 +1,13 @@
 " Common Setting {{{
 set nu
 syntax on
-autocmd InsertLeave * se cul  " 用浅色高亮当前行  
-autocmd InsertEnter * se cul  " 用浅色高亮当前行  
-set showcmd         " 输入的命令显示出来，看的清楚些  
+autocmd InsertLeave * se cul
+autocmd InsertEnter * se cul 
+set showcmd 
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容  
-set laststatus=1    " 启动显示状态行(1),总是显示状态行(2)  
-set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限  
-" colorscheme murphy " 设置配色方案
+set laststatus=1 
+set nocompatible 
+colorscheme desert 
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
@@ -71,6 +71,7 @@ let g:miniBufExplMaxSize = 2
 " }}}
 
 " YouCompleteMe {{{
+let g:loaded_youcompleteme = 1
 let g:ycm_global_ycm_extra_conf = ".ycm_extra_conf.py" 
 let g:ycm_confirm_extra_conf = 0 
 " default path: ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
