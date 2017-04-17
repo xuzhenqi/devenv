@@ -30,3 +30,5 @@ export CPPFLAGS="-I${DEV_HOME}/local/include":$CPPFLAGS
 export LDFLAGS="-L${DEV_HOME}/local/lib":$LDFLAGS
 export PKG_CONFIG_PATH="$DEV_HOME/local/lib/pkgconfig":$PKG_CONFIG_PATH
 export PYTHONPATH="$DEV_HOME/local/lib/python2.7/site-packages":$PYTHONPATH
+
+source $DEV_HOME/development/oh-my-git/prompt.sh
