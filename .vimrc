@@ -71,29 +71,29 @@ let g:miniBufExplMaxSize = 2
 " }}}
 
 " YouCompleteMe {{{
-function! YcmShutDown()
-python << EOF
-import os, psutil
-pid = os.getpid()
-parent = psutil.Process(pid)
-children = parent.children(recursive=True)
-# f = open('temp.log', 'w')
-# f.write("current id: %d\n" % pid)
-kills = []
-for p in children:
-    if p.name() == 'python':
-        kills.append(p)
-    for pp in p.children(recursive=True):
-        if pp.name() == 'python':
-            kills.append(pp)
-for p in kills:
-    print "killed pid:", p.pid, "name:", p.name()
-    # open('temp.log', 'w').write("killed pid: %d, name: %s" % (p.pid, p.name()))
-    p.kill()
-# f.close()
-EOF
-endfunction
-autocmd QuitPre * :call YcmShutDown()<cr>
+" function! YcmShutDown()
+" python << EOF
+" import os, psutil
+" pid = os.getpid()
+" parent = psutil.Process(pid)
+" children = parent.children(recursive=True)
+" # f = open('temp.log', 'w')
+" # f.write("current id: %d\n" % pid)
+" kills = []
+" for p in children:
+"     if p.name() == 'python':
+"         kills.append(p)
+"     for pp in p.children(recursive=True):
+"         if pp.name() == 'python':
+"             kills.append(pp)
+" for p in kills:
+"     print "killed pid:", p.pid, "name:", p.name()
+"     # open('temp.log', 'w').write("killed pid: %d, name: %s" % (p.pid, p.name()))
+"     p.kill()
+" # f.close()
+" EOF
+" endfunction
+" autocmd QuitPre * :call YcmShutDown()<cr>
 " let g:loaded_youcompleteme = 0
 let g:ycm_global_ycm_extra_conf = ".ycm_extra_conf.py" 
 let g:ycm_confirm_extra_conf = 0 
