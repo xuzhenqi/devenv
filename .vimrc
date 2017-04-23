@@ -94,7 +94,7 @@ let g:miniBufExplMaxSize = 2
 " EOF
 " endfunction
 " autocmd QuitPre * :call YcmShutDown()<cr>
-" let g:loaded_youcompleteme = 0
+let g:loaded_youcompleteme = 0
 let g:ycm_global_ycm_extra_conf = ".ycm_extra_conf.py" 
 let g:ycm_confirm_extra_conf = 0 
 " default path: ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
@@ -122,7 +122,7 @@ augroup END
 " }}}
 
 " Taglist {{{
-let Tlist_Ctags_Cmd = '$DEV_HOME/local/bin/ctags'
+" let Tlist_Ctags_Cmd = '$DEV_HOME/local/bin/ctags'
 nnoremap <leader>t :TlistToggle<cr>
 nnoremap <C-[> :ts<cr>
 " ctags -R --c++-kinds=+p --fields=+isS --extra=+q .
