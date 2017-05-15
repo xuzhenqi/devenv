@@ -32,6 +32,7 @@ set cc=81,82
 hi ColorColumn ctermbg=darkgrey guibg=lightgrey
 
 let mapleader = ","
+nnoremap <leader>q :q<cr>:q<cr>:q<cr>:q<cr>
 " }}}
 
 " Common Scripts {{{
@@ -63,7 +64,7 @@ autocmd vimenter * wincmd p
 " <M-n> to toggle NERDTree
 nnoremap <leader>ne :NERDTreeToggle<CR> 
 " close vim if NERDTree is the only window
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " }}} 
 
 " minibufexplorer {{{
@@ -94,7 +95,7 @@ let g:miniBufExplMaxSize = 2
 " EOF
 " endfunction
 " autocmd QuitPre * :call YcmShutDown()<cr>
-let g:loaded_youcompleteme = 0
+" let g:loaded_youcompleteme = 0
 let g:ycm_global_ycm_extra_conf = ".ycm_extra_conf.py" 
 let g:ycm_confirm_extra_conf = 0 
 " default path: ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
