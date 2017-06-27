@@ -166,6 +166,7 @@ augroup end
 function! ScriptInit()
     let line = -1
     let line += 1 | call append(line, "#!/usr/bin/env python")
+    let line += 1 | call append(line, "# -*- coding: utf-8 -*-")
     let line += 1 | call append(line, "import logging")
     let line += 1 | call append(line, "import sys")
     let line += 1 | call append(line, "import argparse")
