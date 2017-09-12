@@ -32,3 +32,5 @@ export PKG_CONFIG_PATH="$DEV_HOME/local/lib/pkgconfig":$PKG_CONFIG_PATH
 export PYTHONPATH="$DEV_HOME/local/lib/python2.7/site-packages":$PYTHONPATH
 
 source $DEV_HOME/development/oh-my-git/prompt.sh
+
+ulimit -c unlimited
