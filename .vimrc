@@ -189,4 +189,11 @@ endfunction
 autocmd FileType python nnoremap <leader>si :call ScriptInit()<cr>
 " }}}
 
-
+" shell init {{{
+function! ScriptInitShell()
+    let line = -1
+    let line += 1 | call append(line, "#!/usr/bin/env bash")
+    let line += 1 | call append(line, "# -*- coding: utf-8 -*-")
+endfunction
+autocmd FileType sh nnoremap <leader>si :call ScriptInitShell()<cr>
+" }}}
