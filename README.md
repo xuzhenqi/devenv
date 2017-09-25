@@ -22,3 +22,6 @@ Just run
 ./install.sh
 ```
 This will overwrite *~/.vim ~/.vimrc*, backup them before installation.
+
+## More tools
+* iterm2 shell integration
