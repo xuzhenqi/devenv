@@ -2,4 +2,5 @@ download
 .vim/autoload
 .vim/indent
 *.swp
+*.swo
 .vim/.netrwhist
