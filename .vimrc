@@ -99,7 +99,8 @@ let g:miniBufExplMaxSize = 2
 let g:ycm_global_ycm_extra_conf = ".ycm_extra_conf.py" 
 let g:ycm_confirm_extra_conf = 0 
 " default path: ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
-" nnoremap <C-[> :YcmCompleter GoToDefinitionElseDeclaration<CR> 
+nnoremap <C-p> :YcmCompleter GoToDefinition<CR> 
+nnoremap <C-o> :YcmCompleter GoToDeclaration<CR>
 " unmap <ESC>
 " YCM GoTo works bad, using tags instead
 set completeopt=longest,menu 
