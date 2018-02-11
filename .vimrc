@@ -156,6 +156,16 @@ let g:flake8_show_in_file=1
 " autocmd BufWritePost *.py call Flake8()
 " }}}
 
+" vim-cpplint {{{
+function! Cpplint()
+    silent make
+    redraw!
+    botright copen 5
+endfunction
+autocmd FileType c,cpp setlocal makeprg=cpplint\ %\ 2>&1
+autocmd FileType c,cpp map <leader>fl :call Cpplint()<CR>
+" }}} 
+
 " proto syntax {{{
 augroup filetype
   au! BufRead,BufNewFile *.proto setfiletype proto
