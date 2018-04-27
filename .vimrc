@@ -71,30 +71,6 @@ nnoremap <leader>ne :NERDTreeToggle<CR>
 let g:miniBufExplMaxSize = 2
 " }}}
 
-" YouCompleteMe {{{
-" function! YcmShutDown()
-" python << EOF
-" import os, psutil
-" pid = os.getpid()
-" parent = psutil.Process(pid)
-" children = parent.children(recursive=True)
-" # f = open('temp.log', 'w')
-" # f.write("current id: %d\n" % pid)
-" kills = []
-" for p in children:
-"     if p.name() == 'python':
-"         kills.append(p)
-"     for pp in p.children(recursive=True):
-"         if pp.name() == 'python':
-"             kills.append(pp)
-" for p in kills:
-"     print "killed pid:", p.pid, "name:", p.name()
-"     # open('temp.log', 'w').write("killed pid: %d, name: %s" % (p.pid, p.name()))
-"     p.kill()
-" # f.close()
-" EOF
-" endfunction
-" autocmd QuitPre * :call YcmShutDown()<cr>
 " let g:loaded_youcompleteme = 0
 let g:ycm_global_ycm_extra_conf = ".ycm_extra_conf.py" 
 let g:ycm_confirm_extra_conf = 0 
@@ -151,10 +127,22 @@ autocmd FileType c,cpp,cuda setlocal cms=//\ %s
 " }}}
 
 " vim-flake8 {{{
-autocmd FileType python map <buffer> <leader>fl :call Flake8()<CR>
-let g:flake8_show_in_file=1
+" autocmd FileType python map <buffer> <leader>fl :call Flake8()<CR>
+" let g:flake8_show_in_file=1
 " autocmd BufWritePost *.py call Flake8()
 " }}}
+
+" vim-pylint {{{
+function! Pylint()
+    silent make
+    redraw!
+    botright copen 5
+endfunction
+autocmd FileType python set makeprg=pylint\ --disable=missing-docstring,broad-except\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %\ 2>/dev/null
+" autocmd FileType python set makeprg=pylint\ %:p 
+autocmd FileType python map <leader>fl :call Pylint()<CR>
+" }}} 
+
 
 " vim-cpplint {{{
 function! Cpplint()
