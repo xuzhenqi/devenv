@@ -8,6 +8,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias tmux="tmux -2" # force tmux to use xterm-256color
 alias vim="vim -u $DEV_HOME/development/devenv/.vimrc"
+alias pipinstall="pip install -i https://mirrors.aliyun.com/pypi/simple/"
 
 # locale setting
 export LANG="en_US.UTF-8"
