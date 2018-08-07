@@ -1,3 +1,4 @@
+set -e
 VALGRIND=`which valgrind`
 if [ "$VALGRIND" = "" ]; then
     if [ ! -d "${DEV_HOME}/development/valgrind-3.12.0" ]; then

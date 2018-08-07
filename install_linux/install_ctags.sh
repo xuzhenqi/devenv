@@ -1,3 +1,4 @@
+set -e
 cd $DEV_HOME/development
 if [ ! -d ctags-5.8 ]; then
 wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz

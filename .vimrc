@@ -127,20 +127,20 @@ autocmd FileType c,cpp,cuda setlocal cms=//\ %s
 " }}}
 
 " vim-flake8 {{{
-" autocmd FileType python map <buffer> <leader>fl :call Flake8()<CR>
-" let g:flake8_show_in_file=1
+autocmd FileType python map <buffer> <leader>fl :call Flake8()<CR>
+let g:flake8_show_in_file=1
 " autocmd BufWritePost *.py call Flake8()
 " }}}
 
 " vim-pylint {{{
-function! Pylint()
-    silent make
-    redraw!
-    botright copen 5
-endfunction
-autocmd FileType python set makeprg=pylint\ --disable=missing-docstring,broad-except\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %\ 2>/dev/null
+" function! Pylint()
+"     silent make
+"     redraw!
+"     botright copen 5
+" endfunction
+" autocmd FileType python set makeprg=pylint\ --disable=missing-docstring,broad-except\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %\ 2>/dev/null
 " autocmd FileType python set makeprg=pylint\ %:p 
-autocmd FileType python map <leader>fl :call Pylint()<CR>
+" autocmd FileType python map <leader>fl :call Pylint()<CR>
 " }}} 
 
 

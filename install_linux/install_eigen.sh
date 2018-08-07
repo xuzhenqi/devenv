@@ -1,3 +1,4 @@
+set -e
 if [ ! -d "${DEV_HOME}/local/include/eigen3" ]; then
     if [ ! -d "$DEV_HOME/development/eigen-eigen-da9b4e14c255" ]; then
         wget -O "$DEV_HOME/development/eigen3.tar.bz2" \

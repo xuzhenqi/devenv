@@ -1,3 +1,4 @@
+set -e
 DOXYGEN=`which doxygen`
 if [ "$DOXYGEN" = "" ]; then
     if [ ! -d "$DEV_HOME/development/doxygen-1.8.13" ]; then

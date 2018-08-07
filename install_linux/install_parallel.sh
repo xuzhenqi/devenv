@@ -1,3 +1,4 @@
+set -e
 PARALLEL=`which parallel`
 if [ "$PARALLEL" = "" ]; then
     if [ ! -d "$DEV_HOME/devlopment/parallel-20161222" ]; then

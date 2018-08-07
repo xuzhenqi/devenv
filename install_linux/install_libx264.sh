@@ -1,3 +1,4 @@
+set -e
 X264=`ls ${DEV_HOME}/local/lib | grep libx264`
 if [ "$X264" = "" ]; then
     if [ ! -d "${DEV_HOME}/development/x264" ]; then

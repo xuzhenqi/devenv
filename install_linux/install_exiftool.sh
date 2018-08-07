@@ -1,3 +1,4 @@
+set -e
 EXIFTOOL=`which exiftool`
 
 if [ "$EXIFTOOL" = "" ]; then

@@ -1,3 +1,4 @@
+set -e
 TMUX=`which tmux`
 
 if [ "$TMUX" = "" ]; then 

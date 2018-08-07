@@ -1,3 +1,4 @@
+set -e
 if [ "${DEV_HOME}" = "" ]; then
     echo "[Error] DEV_HOME: ${DEV_HOME}"
 fi

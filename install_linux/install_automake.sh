@@ -1,3 +1,4 @@
+set -e
 AUTOMAKE=`which automake`
 if [ "$AUTOMAKE" = "" ]; then
     cd $DEV_HOME/development

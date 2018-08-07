@@ -1,3 +1,4 @@
+set -e
 UNZIP=`which unzip`
 if [ "$UNZIP" = "" ]; then
     if [ ! -d "$DEV_HOME/development/unzip60" ]; then

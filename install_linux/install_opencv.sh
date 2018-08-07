@@ -1,3 +1,4 @@
+set -e
 OPENCV=`ls ${DEV_HOME}/local/lib | grep libopencv_core`
 if [ "$OPENCV" = "" ]; then
     if [ ! -d "${DEV_HOME}/development/opencv-2.4.13" ]; then

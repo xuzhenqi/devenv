@@ -1,3 +1,4 @@
+set -e
 DOT=`which dot`
 if [ "$DOT" = "" ]; then
     if [ ! -d "$DEV_HOME/development/graphviz-2.40.1" ]; then

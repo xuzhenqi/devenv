@@ -1,3 +1,4 @@
+set -e
 LIBZIP=`ls $DEV_HOME/local/lib | grep libzip`
 if [ "$LIBZIP" = "" ]; then
     cd $DEV_HOME/development

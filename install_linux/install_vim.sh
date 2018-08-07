@@ -1,4 +1,5 @@
 # install vim from source
+set -e
 
 sh install_linux/install_ctags.sh
 

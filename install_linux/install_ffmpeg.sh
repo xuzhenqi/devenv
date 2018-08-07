@@ -1,3 +1,4 @@
+set -e
 FFMPEG=`which ffmpeg`
 if [ "$FFMPEG" != "${DEV_HOME}/local/bin/ffmpeg" ]; then
     echo "ffmpeg not found."

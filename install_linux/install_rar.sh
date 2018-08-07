@@ -1,3 +1,4 @@
+set -e
 RAR=`which rar`
 if [ "$RAR" = "" ]; then
     cd $DEV_HOME/development

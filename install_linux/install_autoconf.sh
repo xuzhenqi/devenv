@@ -1,3 +1,4 @@
+set -e
 AUTOCONF=`which autoconf`
 if [ "$AUTOCONF" = "" ]; then
     cd $DEV_HOME/development

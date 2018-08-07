@@ -1,3 +1,4 @@
+set -e
 GTEST=`ls {$DEV_HOME}/local/lib | grep libgtest`
 if [ "$GTEST" = "" ]; then
     if [ ! -d "$DEV_HOME/development/googletest-master" ]; then

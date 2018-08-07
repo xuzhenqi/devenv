@@ -1,3 +1,4 @@
+set -e
 ZIP=`which zip`
 if [ "$ZIP" = "" ]; then
     cd $DEV_HOME/development

@@ -1,3 +1,4 @@
+set -e
 cd $DEV_HOME/development
 if [ ! -d ImageMagick-7.0.7-8 ]; then
     # TODO(xzq): using specific version url
