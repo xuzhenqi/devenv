@@ -1,7 +1,7 @@
 set -e
 PWD=`pwd`
 DEV_HOME=${PWD%/*}
-DEV_HOME=${DEV_HOME%/*}
+export DEV_HOME=${DEV_HOME%/*}
 
 sh install_linux/install_basic_setting.sh
 sh install_linux/install_anaconda.sh
