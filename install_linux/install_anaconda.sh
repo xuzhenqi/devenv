@@ -1,4 +1,9 @@
 set -e
+if [ -d $DEV_HOME/development/anaconda2 ]; then
+    echo "anaconda2 already installed."
+    exit 0
+fi
+
 mkdir -p ${PWD}/download
 if [ ! -f "${PWD}/download/Anaconda2-4.2.0-Linux-x86_64.sh" ]; then
     wget -O ${PWD}/download/Anaconda2-4.2.0-Linux-x86_64.sh \
