@@ -12,6 +12,7 @@ if [ "$VIM" != "$DEV_HOME/local/bin/vim" ]; then
         wget https://github.com/vim/vim/archive/v7.4.2367.tar.gz -O vim-7.4.2367.tar.gz
         tar -xvf vim-7.4.2367.tar.gz
     fi
+    cd $DEV_HOME/development/vim-7.4.2367
     ./configure --with-features=huge --enable-multibyte --enable-pythoninterp=yes --enable-cscope --prefix=${DEV_HOME}/local
     make -j`nproc`
     make install
