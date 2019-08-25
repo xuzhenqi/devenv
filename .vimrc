@@ -150,7 +150,7 @@ function! Cpplint()
     redraw!
     botright copen 5
 endfunction
-autocmd FileType c,cpp setlocal makeprg=cpplint\ --filter=-build/c++11\ %\ 2>&1
+autocmd FileType c,cpp setlocal makeprg=cpplint\ --filter=-build/c++11\ --root=src\ %\ 2>&1
 autocmd FileType c,cpp map <leader>fl :call Cpplint()<CR>
 " }}} 
 
@@ -179,7 +179,7 @@ function! ScriptInit()
     let line += 1 | call append(line, "    logging.basicConfig(")
     let line += 1 | call append(line, "        level=logging.INFO,")
     let line += 1 | call append(line, "        stream=sys.stdout,")
-    let line += 1 | call append(line, "        format='%(asctime)-15s %(message)s')")
+    let line += 1 | call append(line, "        format='%(asctime)-15s [%(levelname)s] %(message)s')")
     let line += 1 | call append(line, "    p = argparse.ArgumentParser(")
     let line += 1 | call append(line, "        description='',")
     let line += 1 | call append(line, "        formatter_class=argparse.ArgumentDefaultsHelpFormatter)")
